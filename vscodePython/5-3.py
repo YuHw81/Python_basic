@@ -45,8 +45,15 @@ def ex3():
 '''
 def ex4():
     a = []
-    print(a.count)
-    # while a.count > 6:
+    # print(len(a))
+    while True:
+        b = random.randrange(1, 46)
+        if b not in a:
+            a.append(b)
+        if len(a) > 6:
+            break
+    a.sort()
+    print(a)
 
 # ex4()
 
@@ -75,5 +82,5 @@ def ex5():
         cnt += 1
 
 
-ex5()    
+# ex5()    
 
