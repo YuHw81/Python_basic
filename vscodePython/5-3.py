@@ -34,6 +34,19 @@ def ex3():
     
 # ex3()    
 
+'''
+x반복(0-15)
+    y반복(0-12)
+        4x + 5y == 60 출력
+'''
+def ex3_1():
+    for x in range(0, 16):
+        for y in range(0, 13):
+            if 4 * x + 5 * y == 60:
+                print('(%d, %d)' % (x, y))
+
+# ex3_1()                
+
 
 '''
 로또번호 변수(리스트)
@@ -71,6 +84,7 @@ def ex5():
     print('숫자를 입력해주세요.(1 ~ 100)')
     cnt = 1
     while True:
+    # while cnt <= 10:    #시도횟수 제한
         answer = int(input())
         if answer == number:
             print('정답입니다. 시도횟수 %d회' % cnt)
@@ -81,6 +95,20 @@ def ex5():
             print('큰 숫자를 입력해 주세요.')
         cnt += 1
 
-
 # ex5()    
 
+def ex5_1():
+    rand_num = random.randrange(1, 101)
+    count = 0
+    while True:
+        num = int(input('숫자를 입력해 주세요.'))
+        count += 1
+        if num < rand_num:
+            print('큰 숫자를 입력해 주세요.')
+        elif num > rand_num:
+            print('작은 숫자를 입력해 주세요.')
+        else:
+            print('정답입니다. 시도횟수 %d회' % count)
+            break
+
+ex5_1()        
