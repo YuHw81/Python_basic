@@ -121,3 +121,4 @@ kim.walk('학원')    # Overriding 재정의
 kim.run('400km/h')  # 부모클래스(상속)의 메서드
 kim.sleep()
 
+
