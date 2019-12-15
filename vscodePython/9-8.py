@@ -41,5 +41,26 @@ DB명 (스키마)
 
 127.0.0.1 = localhost
 
+host : 192.168.0.127
+port : 3307
+id / pw : study / study1234
+db : study
+
 '''
+
+
+import pymysql
+
+db = pymysql.connect(host='192.168.0.127', port=3307, user='study', password='study1234', db='study')
+
+try:
+    cursor = db.cursor()
+    sql = 'select * from student'
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    for data in result:
+        # print(type(data))       
+        print(data)     # <class 'tuple'>
+finally:
+    db.close()        
 
